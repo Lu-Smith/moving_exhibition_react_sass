@@ -22,12 +22,9 @@ function App() {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleNextPage);
-    return () => {
-      window.removeEventListener('scroll', handleNextPage);
-    };
+    handleNextPage();
 
-  }, [currentPage]);
+  }, [scroll]);
 
   const pages = [MainPage, PageOne, PageTwo, PageThree, PageFour, PageFive]
 
