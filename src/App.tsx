@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css';
 import MainPage from './components/Artworks/MainPage';
 import Navigation from './components/Navigation/Navigation';
@@ -11,20 +11,35 @@ import PageFive from './components/Artworks/PageFive';
 function App() {
 
   const [scroll, setScroll] = useState(false);
+  const [currentPage, setCurrentPage] = useState(0);
 
   const handleScroll = () => {
     setScroll(!scroll);
-  }
+  };
+
+  const handleNextPage = () => {
+    setCurrentPage((prevPage) => (prevPage + 1) % pages.length);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleNextPage);
+    return () => {
+      window.removeEventListener('scroll', handleNextPage);
+    };
+
+  }, [currentPage]);
 
   const pages = [MainPage, PageOne, PageTwo, PageThree, PageFour, PageFive]
 
   return (
     <div className="App">
-      <div className='inViewPage'>
-      </div>
-      <div className='nextPage'>
-      </div>
-      <Navigation scroll={scroll} handleScroll={handleScroll} />
+        <div className='inViewPage'>
+        {React.createElement(pages[currentPage])}
+        </div>
+        <div className='nextPage'>
+        {React.createElement(pages[(currentPage + 1) % pages.length])}
+        </div>
+      <Navigation handleScroll={handleScroll} />
     </div>
   );
 }

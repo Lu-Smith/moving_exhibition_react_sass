@@ -3,11 +3,10 @@ import NavSvg from './NavSvg'
 import Scroll from './Scroll'
 
 interface navProps {
-  scroll: boolean,
   handleScroll: () => void,
 }
 
-const Navigation = ({scroll, handleScroll}: navProps) => {
+const Navigation = ({handleScroll}: navProps) => {
 
   const [isMainPage, setMainPage] = useState(true);
 
@@ -16,12 +15,16 @@ const Navigation = ({scroll, handleScroll}: navProps) => {
     handleScroll();
   }
 
+  const handleNextPage = () => {
+    handleScroll();
+  }
+
   return (
     <div>
         <h2>Scroll to explore</h2>
         <div className="scrollButton">
           {isMainPage && <div onClick={handleIsMainPage}><NavSvg /></div>}
-          {!isMainPage && <div onClick={handleScroll}><Scroll /></div>}
+          {!isMainPage && <div onClick={handleNextPage}><Scroll /></div>}
         </div>
     </div>
   )
