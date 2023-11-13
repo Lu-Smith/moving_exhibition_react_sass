@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './App.css';
 import MainPage from './components/Artworks/MainPage';
 import Navigation from './components/Navigation/Navigation';
+import PageOne from './components/Artworks/PageOne';
 
 function App() {
 
@@ -14,7 +15,10 @@ function App() {
 
   return (
     <div className="App">
-      <MainPage />
+      <div>
+        <MainPage />
+        <PageOne />
+      </div>
       <Navigation scroll={scroll} handleScroll={handleScroll} />
     </div>
   );
