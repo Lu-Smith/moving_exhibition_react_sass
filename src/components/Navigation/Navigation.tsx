@@ -12,7 +12,7 @@ const Navigation = () => {
 
   return (
     <div>
-        <h2>Scorll to explore</h2>
+        <h2>Scroll to explore</h2>
         <div className="scrollButton">
           <div onClick={handleScroll}><NavSvg /></div>
           {scroll && <Scroll />}
