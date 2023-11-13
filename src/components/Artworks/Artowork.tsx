@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Artowrk = () => {
+const Artowork = () => {
   return (
     <div>Artowrk</div>
   )
 }
 
-export default Artowrk
+export default Artowork
