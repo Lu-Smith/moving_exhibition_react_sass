@@ -1,14 +1,13 @@
-import React, { useState } from 'react'
 import NavSvg from './NavSvg'
 import Scroll from './Scroll'
 
-const Navigation = () => {
+interface navProps {
+  scroll: boolean,
+  handleScroll: () => void,
+}
 
-  const [scroll, setScroll] = useState(false);
+const Navigation = ({scroll, handleScroll}: navProps) => {
 
-  const handleScroll = () => {
-    setScroll(!scroll);
-  }
 
   return (
     <div>
