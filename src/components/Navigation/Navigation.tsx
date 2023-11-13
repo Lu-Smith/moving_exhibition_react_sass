@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import NavSvg from './NavSvg'
 import Scroll from './Scroll'
 
@@ -8,13 +9,19 @@ interface navProps {
 
 const Navigation = ({scroll, handleScroll}: navProps) => {
 
+  const [isMainPage, setMainPage] = useState(true);
+
+  const handleIsMainPage = () => {
+    setMainPage(!isMainPage);
+    handleScroll();
+  }
 
   return (
     <div>
         <h2>Scroll to explore</h2>
         <div className="scrollButton">
-          <div onClick={handleScroll}><NavSvg /></div>
-          {scroll && <Scroll />}
+          {isMainPage && <div onClick={handleIsMainPage}><NavSvg /></div>}
+          {!isMainPage && <div onClick={handleScroll}><Scroll /></div>}
         </div>
     </div>
   )
