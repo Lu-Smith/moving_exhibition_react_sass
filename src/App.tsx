@@ -8,12 +8,13 @@ import PageThree from './components/Artworks/PageThree';
 import PageFour from './components/Artworks/PageFour';
 import PageFive from './components/Artworks/PageFive';
 import PageSix from './components/Artworks/PageSix';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 
 function App() {
 
   const [scroll, setScroll] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
+  const controls = useAnimation();
 
   const handleScroll = () => {
     setScroll(true);
@@ -28,8 +29,8 @@ function App() {
 
   useEffect(() => {
     handleNextPage();
-    console.log(scroll);
-  }, [scroll]);
+    controls.start({ x: `-${currentPage * 100}vw` });
+  }, [scroll, controls]);
 
   const pages = [MainPage, PageOne, PageTwo, PageThree, PageFour, PageFive, PageSix]
 
@@ -38,6 +39,8 @@ function App() {
       <section className='mainSection'>
         <motion.div 
         className='inViewPage'
+        animate={controls}
+        transition={{ duration: 0.5, ease: 'easeInOut'}}
         >
           {React.createElement(pages[currentPage])}
         </motion.div>
