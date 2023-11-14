@@ -28,7 +28,7 @@ function App() {
 
   useEffect(() => {
     handleNextPage();
-  }, [scroll]);
+  }, [scroll, handleNextPage]);
 
   const pages = [MainPage, PageOne, PageTwo, PageThree, PageFour, PageFive, PageSix]
 
