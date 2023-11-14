@@ -2,6 +2,7 @@
 @import './mixins';
 @import './base';
 @import './navigation.scss';
+@import './mainPage.scss';
 
 .App {
  @include flex-direction(center, column);

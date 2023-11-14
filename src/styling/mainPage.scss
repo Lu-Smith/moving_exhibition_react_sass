@@ -1,0 +1,5 @@
+.MainPage {
+    @include flex-direction(center, column);
+    padding: $main-page-padding;
+    gap: 20px;
+}
