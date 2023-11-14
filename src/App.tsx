@@ -30,13 +30,17 @@ function App() {
 
   return (
     <div className="App">
+      <section className='mainSection'>
         <div className='inViewPage'>
-        {React.createElement(pages[currentPage])}
+          {React.createElement(pages[currentPage])}
         </div>
         <div className='nextPage'>
-        {React.createElement(pages[(currentPage + 1) % pages.length])}
+          {React.createElement(pages[(currentPage + 1) % pages.length])}
         </div>
-      <Navigation handleScroll={handleScroll} />
+      </section>
+      <section className='navSection'>
+        <Navigation handleScroll={handleScroll} />
+      </section>
     </div>
   );
 }
