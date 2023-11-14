@@ -1,10 +1,11 @@
-import { useState } from 'react'
-import NavSvg from './NavSvg'
-import Scroll from './Scroll'
+import { useState } from 'react';
+import NavSvg from './NavSvg';
+import Scroll from './Scroll';
+import { motion } from 'framer-motion';
 
 interface navProps {
   handleScroll: () => void,
-}
+};
 
 const Navigation = ({handleScroll}: navProps) => {
 
@@ -15,16 +16,22 @@ const Navigation = ({handleScroll}: navProps) => {
     handleScroll();
   }
 
-  const handleNextPage = () => {
-    handleScroll();
-  }
-
   return (
     <div className='Navigation'>
         <h3>Scroll to explore</h3>
         <div className="scrollButton">
-          {isMainPage && <div onClick={handleIsMainPage} className='mainScrollButton'><NavSvg /></div>}
-          {!isMainPage && <div onClick={handleNextPage} className='pageScrollButton'><Scroll /></div>}
+          {isMainPage && 
+          <motion.button 
+          onClick={handleIsMainPage} 
+          className='mainScrollButton'
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 1.1 }}>
+            <NavSvg />
+          </motion.button>}
+          {!isMainPage && 
+          <div className='pageScrollContainer'>
+            <Scroll handleScroll={handleScroll} />
+          </div>}
         </div>
     </div>
   )

@@ -20,7 +20,7 @@
             }
         }
 
-        .pageScrollButton {
+        .pageScrollContainer {
             width: 1000px;
             height: 100px;
             background-color: $scroll-main-color;
@@ -43,7 +43,7 @@
                     .yearSection {
                         @include flex-direction(center, row);
                   
-                        span {
+                        button {
                             width: 10px;
                             height: 10px;
                             background-color: green;
