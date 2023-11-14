@@ -10,22 +10,43 @@ import PageFive from './components/Artworks/PageFive';
 import PageSix from './components/Artworks/PageSix';
 import { motion } from 'framer-motion';
 
+
+
 function App() {
   const [scroll, setScroll] = useState(false);
 
+  const [scrollValue, setScrollValue] = useState(-100)
+
+  const variants = {
+    scroll: {x : `${scrollValue}vw`},
+    notScroll: {x : `${scrollValue}vw}`},
+  }
+
   const handleScroll = () => {
     setScroll(true);
-  };
-
-  const handleNextPage = () => {
     if (scroll) {
-      setScroll(false);
+      if(scrollValue >= -600) {
+        setScrollValue(scrollValue - 100);
+        setScroll(false);
+        console.log(scrollValue)
+      } else {
+        setScrollValue(100);
+      }
+
     }
   };
 
-  useEffect(() => {
-    handleNextPage();
-  }, [scroll]);
+  const movePage = () => {
+    setScroll(true);
+    if (scroll) {
+      if(scrollValue >= 600) {
+        setScrollValue(scrollValue - 25);
+        setScroll(false);
+      } else {
+        setScrollValue(100);
+      }
+    }
+  };
 
   const pages = [MainPage, PageOne, PageTwo, PageThree, PageFour, PageFive, PageSix];
 
@@ -34,14 +55,17 @@ function App() {
       <section className='mainSection'>
       {pages.map((Page, index) => (
           <div key={index}>
-            <motion.div className='inViewPage'>
+            <motion.div 
+            className='inViewPage'
+            animate={scroll ? 'scroll' : 'notScroll'}
+            variants={variants}>
               {React.createElement(Page)}
             </motion.div>
           </div>
         ))}
       </section>
       <section className='navSection'>
-        <Navigation handleScroll={handleScroll} />
+        <Navigation handleScroll={handleScroll} movePage={movePage} />
       </section>
     </div>
   );

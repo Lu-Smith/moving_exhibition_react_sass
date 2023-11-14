@@ -2,17 +2,10 @@ import React from 'react';
 
 interface navProps {
   handleScroll: () => void,
+  movePage: () => void,
 };
 
-const Scroll = ({handleScroll}: navProps) => {
-
-  const handleNextPage = () => {
-    handleScroll();
-  }
-
-  const movePage = () => {
-    alert('move page a little bit');
-  }
+const Scroll = ({handleScroll, movePage}: navProps) => {
 
   const years = [
     {
@@ -44,7 +37,7 @@ const Scroll = ({handleScroll}: navProps) => {
     <div className='Scroll'>
       {years.map((year, index) => {
         return <div key={index}>
-          <button className='year' onClick={handleNextPage} >{year.year}</button>
+          <button className='year' onClick={handleScroll} >{year.year}</button>
           {year.section.map((section, index) => {
             return <div key={index} className='yearSection'>
               <button onClick={movePage}>{section}</button>

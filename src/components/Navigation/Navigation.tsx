@@ -5,9 +5,10 @@ import { motion } from 'framer-motion';
 
 interface navProps {
   handleScroll: () => void,
+  movePage: () => void,
 };
 
-const Navigation = ({handleScroll}: navProps) => {
+const Navigation = ({handleScroll, movePage}: navProps) => {
 
   const [isMainPage, setMainPage] = useState(true);
 
@@ -30,7 +31,7 @@ const Navigation = ({handleScroll}: navProps) => {
           </motion.button>}
           {!isMainPage && 
           <div className='pageScrollContainer'>
-            <Scroll handleScroll={handleScroll} />
+            <Scroll handleScroll={handleScroll} movePage={movePage} />
           </div>}
         </div>
     </div>
