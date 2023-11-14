@@ -32,10 +32,10 @@ const Scroll = () => {
     <div className='Scroll'>
       {years.map((year, index) => {
         return <div key={index}>
-          <div>{year.year}</div>
+          <div className='year'>{year.year}</div>
           {year.section.map((section, index) => {
             return <div key={index} className='yearSection'>
-              {section}
+              <span>{section}</span>
             </div>
           })}
           
