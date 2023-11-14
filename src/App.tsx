@@ -8,7 +8,7 @@ import PageThree from './components/Artworks/PageThree';
 import PageFour from './components/Artworks/PageFour';
 import PageFive from './components/Artworks/PageFive';
 import PageSix from './components/Artworks/PageSix';
-import { Link, Element } from 'react-scroll';
+import { Element } from 'react-scroll';
 
 function App() {
 
@@ -28,7 +28,7 @@ function App() {
 
   useEffect(() => {
     handleNextPage();
-  }, [scroll, handleNextPage]);
+  }, [scroll]);
 
   const pages = [MainPage, PageOne, PageTwo, PageThree, PageFour, PageFive, PageSix]
 
@@ -36,7 +36,7 @@ function App() {
     <div className="App">
       <section className='mainSection'>
       {pages.map((Page, index) => (
-          <Element key={index} name={`page${index}`}>
+          <Element key={index} name={`page${index}`} id={`page${index}`}>
             <div className='inViewPage'>
               {React.createElement(Page)}
             </div>
@@ -44,16 +44,7 @@ function App() {
         ))}
       </section>
       <section className='navSection'>
-        <Navigation handleScroll={handleScroll} />
-        <Link
-          activeClass="active"
-          to={`page${(currentPage + 1) % pages.length}`}
-          spy={true}
-          smooth={true}
-          duration={500}
-        >
-          <button onClick={handleNextPage}>Next Page</button>
-        </Link>
+        <Navigation handleScroll={handleScroll} currentPage={currentPage} pages={pages} />
       </section>
     </div>
   );
