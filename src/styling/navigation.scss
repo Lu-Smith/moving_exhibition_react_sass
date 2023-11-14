@@ -1,4 +1,7 @@
 .Navigation {
+    @include flex-direction(center, column);
+    gap: 20px;
+    
     .scrollButton {
         @include flex(center, center);
         
