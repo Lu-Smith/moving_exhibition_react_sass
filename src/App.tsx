@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import './styling/app.scss';
 import MainPage from './components/Artworks/MainPage';
 import Navigation from './components/Navigation/Navigation';
