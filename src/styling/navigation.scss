@@ -1,8 +1,7 @@
 .Navigation {
     .scrollButton {
         @include flex(center, center);
-
-
+        
         .mainScrollButton {
             width: 200px;
             height: 100px;
