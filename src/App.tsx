@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect} from 'react';
 import './styling/app.scss';
 import MainPage from './components/Artworks/MainPage';
 import Navigation from './components/Navigation/Navigation';
@@ -8,6 +8,7 @@ import PageThree from './components/Artworks/PageThree';
 import PageFour from './components/Artworks/PageFour';
 import PageFive from './components/Artworks/PageFive';
 import PageSix from './components/Artworks/PageSix';
+import { motion } from 'framer-motion';
 
 function App() {
   const [scroll, setScroll] = useState(false);
@@ -33,9 +34,9 @@ function App() {
       <section className='mainSection'>
       {pages.map((Page, index) => (
           <div key={index}>
-            <div className='inViewPage'>
+            <motion.div className='inViewPage'>
               {React.createElement(Page)}
-            </div>
+            </motion.div>
           </div>
         ))}
       </section>
