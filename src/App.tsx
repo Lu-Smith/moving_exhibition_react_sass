@@ -8,13 +8,12 @@ import PageThree from './components/Artworks/PageThree';
 import PageFour from './components/Artworks/PageFour';
 import PageFive from './components/Artworks/PageFive';
 import PageSix from './components/Artworks/PageSix';
-import { motion, useAnimation } from 'framer-motion';
+import { Link, Element } from 'react-scroll';
 
 function App() {
 
   const [scroll, setScroll] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
-  const controls = useAnimation();
 
   const handleScroll = () => {
     setScroll(true);
@@ -29,27 +28,32 @@ function App() {
 
   useEffect(() => {
     handleNextPage();
-    controls.start({ x: `-${currentPage * 100}vw` });
-  }, [scroll, controls]);
+  }, [scroll]);
 
   const pages = [MainPage, PageOne, PageTwo, PageThree, PageFour, PageFive, PageSix]
 
   return (
     <div className="App">
       <section className='mainSection'>
-        <motion.div 
-        className='inViewPage'
-        animate={controls}
-        transition={{ duration: 0.5, ease: 'easeInOut'}}
-        >
-          {React.createElement(pages[currentPage])}
-        </motion.div>
-        <motion.div className='nextPage'>
-          {React.createElement(pages[(currentPage + 1) % pages.length])}
-        </motion.div>
+      {pages.map((Page, index) => (
+          <Element key={index} name={`page${index}`}>
+            <div className='inViewPage'>
+              {React.createElement(Page)}
+            </div>
+          </Element>
+        ))}
       </section>
       <section className='navSection'>
         <Navigation handleScroll={handleScroll} />
+        <Link
+          activeClass="active"
+          to={`page${(currentPage + 1) % pages.length}`}
+          spy={true}
+          smooth={true}
+          duration={500}
+        >
+          <button onClick={handleNextPage}>Next Page</button>
+        </Link>
       </section>
     </div>
   );
