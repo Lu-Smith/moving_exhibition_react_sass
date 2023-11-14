@@ -1,6 +1,18 @@
 .Navigation {
     .scrollButton {
-        width: 200px;
-        height: 200px;
+
+
+        .mainScrollButton {
+            width: 200px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+        .pageScrollButton {
+            width: 1000px;
+            height: 100px;
+            background-color: $scroll-main-color;
+            border-radius: 100px;
+        }
     }
 }

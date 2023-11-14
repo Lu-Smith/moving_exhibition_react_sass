@@ -4,7 +4,7 @@
 @import './navigation.scss';
 
 .App {
- @include flex-direction(center, column);
+ @include flex-direction(center, row);
  width: 100vw;
  height: 100vh;
  overflow: hidden;
