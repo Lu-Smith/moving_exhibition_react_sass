@@ -7,6 +7,12 @@
  @include flex-direction(center, column);
  width: 100vw;
  height: 100vh;
+ overflow: hidden;
+
+ section{
+    text-align: center;
+    padding: $main-page-padding;
+ }
 
  .mainSection {
     flex: 3;
