@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './App.css';
+import './styling/app.scss';
 import MainPage from './components/Artworks/MainPage';
 import Navigation from './components/Navigation/Navigation';
 import PageOne from './components/Artworks/PageOne';
