@@ -20,8 +20,8 @@ const Navigation = ({handleScroll}: navProps) => {
   }
 
   return (
-    <div>
-        <h2>Scroll to explore</h2>
+    <div className='Naviagation'>
+        <h3>Scroll to explore</h3>
         <div className="scrollButton">
           {isMainPage && <div onClick={handleIsMainPage}><NavSvg /></div>}
           {!isMainPage && <div onClick={handleNextPage}><Scroll /></div>}
