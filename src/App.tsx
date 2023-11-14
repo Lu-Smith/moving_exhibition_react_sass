@@ -8,6 +8,7 @@ import PageThree from './components/Artworks/PageThree';
 import PageFour from './components/Artworks/PageFour';
 import PageFive from './components/Artworks/PageFive';
 import PageSix from './components/Artworks/PageSix';
+import { motion } from 'framer-motion';
 
 function App() {
 
@@ -31,12 +32,14 @@ function App() {
   return (
     <div className="App">
       <section className='mainSection'>
-        <div className='inViewPage'>
+        <motion.div 
+        className='inViewPage'
+        >
           {React.createElement(pages[currentPage])}
-        </div>
-        <div className='nextPage'>
+        </motion.div>
+        <motion.div className='nextPage'>
           {React.createElement(pages[(currentPage + 1) % pages.length])}
-        </div>
+        </motion.div>
       </section>
       <section className='navSection'>
         <Navigation handleScroll={handleScroll} />

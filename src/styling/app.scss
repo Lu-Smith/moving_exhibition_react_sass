@@ -17,7 +17,7 @@
 
  .mainSection {
     flex: 3;
-    @include flex-direction(center, row);
+    @include flex-direction(flex-start, row);
 
     div {
       @include flex(center, center);
