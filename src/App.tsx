@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './styling/app.scss';
 import MainPage from './components/Artworks/MainPage';
 import Navigation from './components/Navigation/Navigation';
@@ -8,12 +8,9 @@ import PageThree from './components/Artworks/PageThree';
 import PageFour from './components/Artworks/PageFour';
 import PageFive from './components/Artworks/PageFive';
 import PageSix from './components/Artworks/PageSix';
-import { Element } from 'react-scroll';
 
 function App() {
-
   const [scroll, setScroll] = useState(false);
-  const [currentPage, setCurrentPage] = useState(0);
 
   const handleScroll = () => {
     setScroll(true);
@@ -21,7 +18,6 @@ function App() {
 
   const handleNextPage = () => {
     if (scroll) {
-      setCurrentPage((prevPage) => (prevPage + 1) % pages.length);
       setScroll(false);
     }
   };
@@ -30,21 +26,21 @@ function App() {
     handleNextPage();
   }, [scroll]);
 
-  const pages = [MainPage, PageOne, PageTwo, PageThree, PageFour, PageFive, PageSix]
+  const pages = [MainPage, PageOne, PageTwo, PageThree, PageFour, PageFive, PageSix];
 
   return (
     <div className="App">
       <section className='mainSection'>
       {pages.map((Page, index) => (
-          <Element key={index} name={`page${index}`} id={`page${index}`}>
+          <div key={index}>
             <div className='inViewPage'>
               {React.createElement(Page)}
             </div>
-          </Element>
+          </div>
         ))}
       </section>
       <section className='navSection'>
-        <Navigation handleScroll={handleScroll} currentPage={currentPage} pages={pages} />
+        <Navigation handleScroll={handleScroll} />
       </section>
     </div>
   );

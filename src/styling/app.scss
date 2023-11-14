@@ -20,6 +20,7 @@
     flex: 3;
     width: 100vw;
    @include flex-direction(flex-start, row);
+   overflow-x: scroll;
 
     div {
       @include flex(center, center);
