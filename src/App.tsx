@@ -15,7 +15,7 @@ import { motion } from 'framer-motion';
 function App() {
   const [scroll, setScroll] = useState(false);
 
-  const [scrollValue, setScrollValue] = useState(-100)
+  const [scrollValue, setScrollValue] = useState(0);
 
   const variants = {
     scroll: {x : `${scrollValue}vw`},
@@ -24,27 +24,22 @@ function App() {
 
   const handleScroll = () => {
     setScroll(true);
-    if (scroll) {
-      if(scrollValue >= -600) {
-        setScrollValue(scrollValue - 100);
-        setScroll(false);
-        console.log(scrollValue)
-      } else {
-        setScrollValue(100);
-      }
-
+    if(scrollValue > -600) {
+      setScrollValue(scrollValue - 100);
+    } else {
+      setScrollValue(100);
+      setScroll(false);
     }
   };
 
   const movePage = () => {
     setScroll(true);
-    if (scroll) {
-      if(scrollValue >= 600) {
-        setScrollValue(scrollValue - 25);
-        setScroll(false);
-      } else {
-        setScrollValue(100);
-      }
+    if(scrollValue > -600) {
+      setScrollValue(scrollValue - 25);
+      console.log(scrollValue);
+    } else {
+      setScrollValue(25);
+      setScroll(false);
     }
   };
 
