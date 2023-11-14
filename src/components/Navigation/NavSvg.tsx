@@ -5,8 +5,8 @@ const NavSvg = () => {
 <div>
     <svg 
     fill="#000000" 
-    height="800px" 
-    width="800px" 
+    height="100px" 
+    width="100px" 
     version="1.1" 
     id="Layer_1" 
     xmlns="http://www.w3.org/2000/svg" 
