@@ -7,6 +7,7 @@ import PageTwo from './components/Artworks/PageTwo';
 import PageThree from './components/Artworks/PageThree';
 import PageFour from './components/Artworks/PageFour';
 import PageFive from './components/Artworks/PageFive';
+import PageSix from './components/Artworks/PageSix';
 
 function App() {
 
@@ -25,7 +26,7 @@ function App() {
     handleNextPage();
   }, [scroll]);
 
-  const pages = [MainPage, PageOne, PageTwo, PageThree, PageFour, PageFive]
+  const pages = [MainPage, PageOne, PageTwo, PageThree, PageFour, PageFive, PageSix]
 
   return (
     <div className="App">
