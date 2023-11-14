@@ -18,7 +18,8 @@
 
  .mainSection {
     flex: 3;
-    @include flex-direction(flex-start, row);
+    width: 100vw;
+   @include flex-direction(flex-start, row);
 
     div {
       @include flex(center, center);

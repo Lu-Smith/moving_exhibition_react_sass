@@ -16,15 +16,19 @@ function App() {
   const [currentPage, setCurrentPage] = useState(0);
 
   const handleScroll = () => {
-    setScroll(!scroll);
+    setScroll(true);
   };
 
   const handleNextPage = () => {
-    setCurrentPage((prevPage) => (prevPage + 1) % pages.length);
+    if (scroll) {
+      setCurrentPage((prevPage) => (prevPage + 1) % pages.length);
+      setScroll(false);
+    }
   };
 
   useEffect(() => {
     handleNextPage();
+    console.log(scroll);
   }, [scroll]);
 
   const pages = [MainPage, PageOne, PageTwo, PageThree, PageFour, PageFive, PageSix]
