@@ -28,23 +28,9 @@ function App() {
     setScroll(true);
     if(scrollValue >= -500) {
       setScrollValue(scrollValue - 100);
-      console.log(scrollValue)
     } else {
       setScrollValue(100);
       setplayFromBeginning(true);
-      setScroll(false);
-    }
-  };
-
-  const movePage = () => {
-    setScroll(true);
-    if(scrollValue >= -500) {
-      setScrollValue(scrollValue - 25);
-      console.log(scrollValue);
-    } else {
-      setScrollValue(25);
-
-      console.log(scrollValue)
       setScroll(false);
     }
   };
@@ -66,7 +52,7 @@ function App() {
         ))}
       </section>
       <section className='navSection'>
-        <Navigation handleScroll={handleScroll} movePage={movePage} playFromBeginning={playFromBeginning}/>
+        <Navigation handleScroll={handleScroll} playFromBeginning={playFromBeginning}/>
       </section>
     </div>
   );
