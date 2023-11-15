@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './styling/app.scss';
 import MainPage from './components/Artworks/MainPage';
 import Navigation from './components/Navigation/Navigation';
@@ -12,6 +12,8 @@ import { motion } from 'framer-motion';
 
 function App() {
   const [scroll, setScroll] = useState(false);
+
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const [scrollValue, setScrollValue] = useState(0);
 
@@ -33,11 +35,17 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.scrollLeft = -scrollValue;
+    }
+  }, [scrollValue]);
+
   const pages = [MainPage, PageOne, PageTwo, PageThree, PageFour, PageFive, PageSix];
 
   return (
     <div className="App">
-      <section className='mainSection'>
+      <section className='mainSection' ref={containerRef}>
       {pages.map((Page, index) => (
           <div key={index}>
             <motion.div 
