@@ -18,7 +18,7 @@
 
  .mainSection {
    width: 100vw;
- height: 100vh;
+   height: 100vh;
    @include flex-direction(flex-start, row);
    overflow-x: scroll;
 
@@ -27,10 +27,6 @@
       text-align: center;
       width: 100vw;
       height: 100%;
-    }
-
-    .inViewPage {
-      background-color: yellow;
     }
  }
 
