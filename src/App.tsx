@@ -36,8 +36,11 @@ function App() {
 
   useEffect(() => {
     if (containerRef.current) {
+      const screenWidth = window.innerWidth;
+      const percentageFactor = 0.01; 
+
       containerRef.current.scrollTo({
-        left: -scrollValue * 18.7,
+        left: -scrollValue * (screenWidth * percentageFactor),
         behavior: 'smooth',
       });
     }
