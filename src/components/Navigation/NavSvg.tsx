@@ -7,7 +7,7 @@ const NavSvg = () => {
     fill="rgb(64, 149, 160)" 
     // whileHover={{ fill: 'rgb(20, 88, 44)' }}
     // whileTap={{ fill: 'rgb(0, 102, 255)' }}
-    height="100px" 
+    height="80px" 
     width="100px" 
     version="1.1" 
     id="Layer_1" 
