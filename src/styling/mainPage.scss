@@ -1,4 +1,17 @@
 .MainPage {
+    //keyframes
+    @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+      }
+
     @include flex-direction(center, column);
     padding: $main-page-padding;
 
@@ -20,8 +33,9 @@
         .MainAnimation {
             width: 120px;
             height: 120px;
-            background: green;
-          }
+            animation: gradientAnimation 5s infinite;
+            background-image: url(../assets/backgroundAnimation.jpg);
+        }
     }
 
 
