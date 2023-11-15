@@ -6,15 +6,20 @@ import { motion } from 'framer-motion';
 interface navProps {
   handleScroll: () => void,
   movePage: () => void,
+  playFromBeginning: boolean,
 };
 
-const Navigation = ({handleScroll, movePage}: navProps) => {
+const Navigation = ({handleScroll, movePage, playFromBeginning }: navProps) => {
 
   const [isMainPage, setMainPage] = useState(true);
 
   const handleIsMainPage = () => {
     setMainPage(!isMainPage);
     handleScroll();
+  }
+
+  if (playFromBeginning) {
+    setMainPage(true);
   }
 
   return (
