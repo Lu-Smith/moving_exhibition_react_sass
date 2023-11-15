@@ -1,3 +1,5 @@
+//scrollbar
+
 ::-webkit-scrollbar {
     height: 50px;
     width: 5px;
@@ -29,4 +31,18 @@
 
   #progress .indicator {
     stroke: green;
+  }
+
+  //main components
+
+  h1 {
+    font-size: $large-font-size;
+    line-height: $large-line-height;
+    font-weight: 400;
+  }
+
+  h2 {
+    font-size: $big-font-size;
+    line-height: $big-line-height;
+    font-weight: 400;
   }
