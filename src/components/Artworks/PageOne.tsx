@@ -1,8 +1,11 @@
 import React from 'react'
+import InteractiveLineBackground from './InteractiveLineBackground'
 
 const PageOne = () => {
   return (
-    <div>PageOne</div>
+    <div>
+      <InteractiveLineBackground />
+    </div>
   )
 }
 
