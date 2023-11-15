@@ -42,10 +42,13 @@
     color: $primary-color;
   }
 
-  h2 {
+  h2, h3 {
     font-size: $big-font-size;
     line-height: $big-line-height;
     font-weight: 400;
     color: $secondary-color;
+  }
+
+  h2 {
     max-width: 800px;
   }
