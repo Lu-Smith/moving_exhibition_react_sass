@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './styling/app.scss';
-import MainPage from './components/Artworks/MainPage';
+import MainPage from './components/Artworks/MainPage/MainPage';
 import Navigation from './components/Navigation/Navigation';
 import PageOne from './components/Artworks/PageOne';
 import PageTwo from './components/Artworks/PageTwo';
