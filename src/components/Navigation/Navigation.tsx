@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import NavSvg from './NavSvg';
 import Scroll from './Scroll';
 import { motion } from 'framer-motion';
@@ -18,9 +18,10 @@ const Navigation = ({handleScroll, movePage, playFromBeginning }: navProps) => {
     handleScroll();
   }
 
-  if (playFromBeginning) {
+  useEffect(() => {
     setMainPage(true);
-  }
+  }, [playFromBeginning])
+
 
   return (
     <div className='Navigation'>
