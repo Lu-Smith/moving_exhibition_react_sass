@@ -18,12 +18,6 @@ function App() {
 
   const [playFromBeginning, setPlayFromBeginning] = useState(false);
 
-
-  // const variants = {
-  //   scroll: {x : `${scrollValue}vw`},
-  //   notScroll: {x : `${scrollValue}vw}`},
-  // }
-
   const handleScroll = () => {
     if(scrollValue >= -500) {
       setPlayFromBeginning(false);
@@ -55,8 +49,6 @@ function App() {
           <div key={index}>
             <motion.div 
             className='inViewPage'>
-            {/* // animate={scroll ? 'scroll' : 'notScroll'}
-            // variants={variants}> */}
               {React.createElement(Page)}
             </motion.div>
           </div>

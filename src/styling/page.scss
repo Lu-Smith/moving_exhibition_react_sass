@@ -1,0 +1,13 @@
+.Page {
+    margin: 0;
+    padding: 0;
+    @include flex(center, center);
+    position: relative;
+
+    .backgroundContainer {
+        svg {
+            margin-bottom: 120px;
+        }
+
+    }
+}

@@ -1,10 +1,13 @@
 import React from 'react'
-import InteractiveLineBackground from './InteractiveLineBackground'
+import InteractiveBackground from './InteractiveBackground'
 
 const PageOne = () => {
   return (
-    <div>
-      <InteractiveLineBackground />
+    <div className='Page'>
+      <div className="backgroundContainer">
+      <InteractiveBackground />
+      </div>
+ 
     </div>
   )
 }
