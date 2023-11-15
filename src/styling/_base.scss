@@ -39,10 +39,13 @@
     font-size: $large-font-size;
     line-height: $large-line-height;
     font-weight: 400;
+    color: $primary-color;
   }
 
   h2 {
     font-size: $big-font-size;
     line-height: $big-line-height;
     font-weight: 400;
+    color: $secondary-color;
+    max-width: 800px;
   }
