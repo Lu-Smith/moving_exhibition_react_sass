@@ -5,10 +5,10 @@
 @import './mainPage.scss';
 
 .App {
- @include flex-direction(center, column);
  width: 100vw;
  height: 100vh;
  overflow: hidden;
+ position: relative;
 
  section{
     text-align: center;
@@ -17,26 +17,10 @@
  }
 
  .mainSection {
-    flex: 3;
-    width: 100vw;
+   width: 100vw;
+ height: 100vh;
    @include flex-direction(flex-start, row);
    overflow-x: scroll;
-
-   ::-webkit-scrollbar {
-      height: 5px;
-      width: 5px;
-      background: #fff3;
-      -webkit-border-radius: 1ex;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-      background: var(--accent);
-      -webkit-border-radius: 1ex;
-    }
-    
-    ::-webkit-scrollbar-corner {
-      background: #fff3;
-    }
 
     div {
       @include flex(center, center);
@@ -51,7 +35,7 @@
  }
 
  .navSection {
-    flex: 1;
-    background-color: red;
+    position: fixed;
+    bottom: 0;
  }
 }
