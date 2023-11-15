@@ -3,17 +3,17 @@
 ::-webkit-scrollbar {
     height: 50px;
     width: 5px;
-    background: #fff3;
+    background: $primary-background;
     -webkit-border-radius: 1ex;
   }
   
   ::-webkit-scrollbar-thumb {
-    background: yellow;
+    background: $scroll-main-color;
     -webkit-border-radius: 1ex;
   }
   
   ::-webkit-scrollbar-corner {
-    background: #fff3;
+    background: $scroll-main-color;
   }
 
   #progress {

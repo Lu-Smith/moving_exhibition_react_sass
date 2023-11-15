@@ -8,47 +8,15 @@
         .mainScrollButton {
             width: 200px;
             height: 100px;
-            background-color: yellow;
+            background-color: transparent;
             border-radius: 100px;
+            border: $border-button;
 
             div {
                 width: 200px;
                 height: 150px;
                 svg {
 
-                }
-            }
-        }
-
-        .pageScrollContainer {
-            width: 1000px;
-            height: 100px;
-            background-color: $scroll-main-color;
-            border-radius: 100px;
-            @include flex(center, center);
-
-            .Scroll {
-                @include flex-direction(center, row);
-                gap: 15px; 
-
-                div {
-                    @include flex-direction(center, row);
-                    gap: 15px;   
-                
-
-                    .year {
-                        font-weight: bold;
-                    }
-    
-                    .yearSection {
-                        @include flex-direction(center, row);
-                  
-                        button {
-                            width: 10px;
-                            height: 10px;
-                            background-color: green;
-                        }
-                    }
                 }
             }
         }
