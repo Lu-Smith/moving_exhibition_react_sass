@@ -9,6 +9,7 @@ $primary-background: rgb(235, 234, 234);
 $scroll-main-color: rgb(64, 149, 160);
 $primary-color: rgb(36, 36, 35);
 $secondary-color: #37383b;
+$hover-color: rgb(20, 88, 44);
 
 //font size
 $large-font-size: 44px;
@@ -20,3 +21,4 @@ $big-line-height: 22px;
 
 //border
 $border-button: 1px solid $scroll-main-color;
+$hover-border-button: 1px solid $hover-color;

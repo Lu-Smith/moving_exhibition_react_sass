@@ -11,6 +11,11 @@
             background-color: transparent;
             border-radius: 100px;
             border: $border-button;
+            transition: 200ms all ease-in-out;
+            
+            &:hover {
+                border: $hover-border-button;
+            }
 
             div {
                 width: 200px;
