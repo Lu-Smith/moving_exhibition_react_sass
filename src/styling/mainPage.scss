@@ -28,7 +28,7 @@
     .animationContainer {
         flex: 4;
         @include flex(center,center);
-        margin-bottom: 160px;
+        padding-bottom: 40px;
 
         .MainAnimation {
             width: 120px;
