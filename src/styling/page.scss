@@ -24,6 +24,16 @@
             }
         }
 
+        .backBackgroundSmall {
+            position: absolute;
+            right: 50%;
+            top: 20%;
+            z-index: 1;
+            svg {
+                margin-bottom: 120px;
+            }
+        }
+
         .paintings {
             position: absolute;
             z-index: 3;
