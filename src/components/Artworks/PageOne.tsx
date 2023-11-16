@@ -35,13 +35,13 @@ const PageOne: React.FC = () => {
           <InteractiveBackgroundSmall />
         </div>
         <div className="paintings">
-        <div className="imageContainerLandscape one" style={{ border: `8px solid rgba(${mousePosition.x / window.innerWidth * 255}, ${mousePosition.y / window.innerHeight * 255}, 0, 0.5)` }}>
+        <div className="imageContainerLandscape one" style={{ border: `8px solid rgba(${mousePosition.x / window.innerWidth * 255}, ${mousePosition.y / window.innerHeight * 255}, 0, 1)` }}>
             <img src={ZinShadows} alt="Z in Shadows, oil painting by Luna Smith" />
           </div>
-          <div className="imageContainerLandscape two" style={{ border: `8px solid rgba(${mousePosition.x / window.innerWidth * 255}, ${mousePosition.y / window.innerHeight * 255}, 0, 0.5)` }}>
+          <div className="imageContainerLandscape two" style={{ border: `8px solid rgba(${mousePosition.x / window.innerWidth * 255}, ${mousePosition.y / window.innerHeight * 255}, 0, 1)` }}>
             <img src={ScottishDream} alt="L in Shadows, oil painting by Luna Smith" />
           </div>
-          <div className="imageContainerPortrait three" style={{ border: `8px solid rgba(${mousePosition.x / window.innerWidth * 255}, ${mousePosition.y / window.innerHeight * 255}, 0, 0.5)` }}>
+          <div className="imageContainerPortrait three" style={{ border: `8px solid rgba(${mousePosition.x / window.innerWidth * 255}, ${mousePosition.y / window.innerHeight * 255}, 0, 1)` }}>
             <img src={WomenNature} alt="Women Nature, oil painting by Luna Smith" />
           </div>
         </div>
