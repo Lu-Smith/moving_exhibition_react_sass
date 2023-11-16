@@ -1,5 +1,6 @@
 import React from 'react'
 import InteractiveBackground from './InteractiveBackground'
+import InteractiveBackgroundSmall from './InteractiveBackgroundSmall'
 import TopBackground from './TopBackground'
 import ZinShadows from '../../assets/paintings/Z in Shadows by Luna Smith.jpg'
 import ScottishDream from '../../assets/paintings/Scottish Dream by Luna Smith.jpg'
@@ -14,6 +15,9 @@ const PageOne = () => {
         </div>
         <div className="backBackground">
           <InteractiveBackground />
+        </div>
+        <div className="backBackgroundSmall">
+          <InteractiveBackgroundSmall />
         </div>
         <div className="paintings">
           <div className="imageContainerLandscape one">
