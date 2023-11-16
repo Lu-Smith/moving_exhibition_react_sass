@@ -26,6 +26,10 @@ const PageOne: React.FC = () => {
     hover: { scale: 1.1, x: 30, transition: { duration: 0.3 } },
   };
 
+  const imageRotateVariants = {
+    hover: { scale: 1.1, y: 30, rotate: 30, transition: { duration: 0.3 } },
+  };
+
   const backgroundVariants = {
     hover: { scale: 1.1, y: -30, transition: { duration: 0.3 } },
   };
@@ -68,10 +72,10 @@ const PageOne: React.FC = () => {
           <motion.div 
           className="imageContainerLandscape two" 
           whileHover="hover"
-          variants={imageVariants}
+          variants={imageRotateVariants}
           initial="initial"
           style={{ border: `8px solid rgba(${mousePosition.x / window.innerWidth * 55}, ${mousePosition.y / window.innerHeight * 55}, 0, 1)` }}>
-            <img src={ScottishDream} alt="L in Shadows, oil painting by Luna Smith" />
+            <img src={ScottishDream} alt="Scottish Dream, oil painting by Luna Smith" />
           </motion.div>
           <motion.div 
           className="imageContainerPortrait three"

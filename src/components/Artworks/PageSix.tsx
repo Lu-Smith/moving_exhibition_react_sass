@@ -25,6 +25,14 @@ const PageSix: React.FC = () => {
     hover: { scale: 1.1, x: 30, transition: { duration: 0.3 } },
   };
 
+  const imageRotateVariants = {
+    hover: { scale: 1.1, y: -30, rotate: -30, transition: { duration: 0.3 } },
+  };
+
+  const imageFullRotateVariants = {
+    hover: { scale: 0.6, rotate: 360, transition: { duration: 0.3 } },
+  };
+
   return (
     <div className='Page'>
     <div className="backgroundContainer">
@@ -58,7 +66,7 @@ const PageSix: React.FC = () => {
           </motion.div>
           <motion.div className="imageContainerPortrait three" 
              whileHover="hover"
-             variants={imageVariants}
+             variants={imageRotateVariants}
              initial="initial"
              transition={{
               duration: 2,
@@ -87,6 +95,8 @@ const PageSix: React.FC = () => {
               restDelta: 0.001
             }
           }}
+          whileHover="hover"
+          variants={imageFullRotateVariants}
           style={{ border: `4px solid rgba(${mousePosition.x / window.innerWidth * 55}, ${mousePosition.y / window.innerHeight * 55}, 0, 1)` }}>
             <img src={Universe} alt="the Reflection of my Universe, oil painting by Luna Smith" />
           </motion.div>

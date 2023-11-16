@@ -26,6 +26,10 @@ const PageThree: React.FC = () => {
     hover: { scale: 1.1, x: 30, transition: { duration: 0.3 } },
   };
 
+  const imageRotateVariants = {
+    hover: { scale: 1.1, y: -30, rotate: -30, transition: { duration: 0.3 } },
+  };
+
   return (
     <div className='Page'>
     <div className="backgroundContainer">
@@ -68,8 +72,18 @@ const PageThree: React.FC = () => {
           <motion.div 
           className="imageContainerPortrait three"
           whileHover="hover"
-          variants={imageVariants}
+          variants={imageRotateVariants}
           initial="initial" 
+          transition={{
+            duration: 2,
+            ease: [0, 0.71, 0.2, 1.01],
+            scale: {
+              type: "spring",
+              damping: 5,
+              stiffness: 100,
+              restDelta: 0.001
+            }
+          }}
           style={{ border: `4px solid rgba(${mousePosition.x / window.innerWidth * 55}, ${mousePosition.y / window.innerHeight * 55}, 0, 1)` }}>
             <img src={Owl} alt="Owl, oil painting by Luna Smith" />
           </motion.div>
