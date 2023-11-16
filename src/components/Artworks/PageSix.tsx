@@ -21,6 +21,10 @@ const PageSix: React.FC = () => {
     };
   }, []);
 
+  const imageVariants = {
+    hover: { scale: 1.1, x: 30, transition: { duration: 0.3 } },
+  };
+
   return (
     <div className='Page'>
     <div className="backgroundContainer">
@@ -28,18 +32,47 @@ const PageSix: React.FC = () => {
         <TopBackground />
       </div>
       <div className="paintings">
-          <div className="imageContainerLandscape one odd" 
+          <motion.div className="imageContainerLandscape one odd"
+             whileHover="hover"
+             variants={imageVariants}
+             initial="initial" 
+             transition={{
+              duration: 2,
+              ease: [0, 0.71, 0.2, 1.01],
+              scale: {
+                type: "spring",
+                damping: 5,
+                stiffness: 100,
+                restDelta: 0.001
+              }
+            }}
           style={{ border: `4px solid rgba(${mousePosition.x / window.innerWidth * 55}, ${mousePosition.y / window.innerHeight * 55}, 0, 1)` }}>
             <img src={Diabaig} alt="The Wishper of Diabaig, oil painting by Luna Smith" />
-          </div>
-          <div className="imageContainerLandscape two odd" 
+          </motion.div>
+          <motion.div className="imageContainerLandscape two odd" 
+             whileHover="hover"
+             variants={imageVariants}
+             initial="initial"
           style={{ border: `4px solid rgba(${mousePosition.x / window.innerWidth * 55}, ${mousePosition.y / window.innerHeight * 55}, 0, 1)` }}>
             <img src={GoldenTrees} alt="The Golden Trees, oil painting by Luna Smith" />
-          </div>
-          <div className="imageContainerPortrait three" 
+          </motion.div>
+          <motion.div className="imageContainerPortrait three" 
+             whileHover="hover"
+             variants={imageVariants}
+             initial="initial"
+             transition={{
+              duration: 2,
+              ease: [0, 0.71, 0.2, 1.01],
+              scale: {
+                type: "spring",
+                damping: 5,
+                stiffness: 100,
+                restDelta: 0.001
+              }
+            }}
           style={{ border: `4px solid rgba(${mousePosition.x / window.innerWidth * 55}, ${mousePosition.y / window.innerHeight * 55}, 0, 1)` }}>
             <img src={DreamsFuture} alt="Dreams of Future Self, oil painting by Luna Smith" />
-          </div>
+          </motion.div>
           <motion.div 
           className="imageContainerPortrait four" 
           initial={{ opacity: 0, scale: 0.5 }}

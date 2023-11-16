@@ -22,24 +22,41 @@ const PageFour: React.FC = () => {
     };
   }, []);
 
+  const imageVariants = {
+    hover: { scale: 1.1, x: 30, transition: { duration: 0.3 } },
+  };
+
+  const backgroundVariants = {
+    hover: { scale: 1.1, y: 30, transition: { duration: 0.3 } },
+  };
+
   return (
     <div className='Page'>
     <div className="backgroundContainer">
       <div className="frontBackground">
         <TopBackground />
       </div>
-      <div className="backBackgroundSmall">
+      <motion.div 
+        className="backBackgroundSmall"
+        initial="initial"
+        whileHover="hover"
+        variants={backgroundVariants}>
           <InteractiveBackgroundSmall />
-      </div>
+        </motion.div>
       <div className="paintings">
-        <div className="imageContainerLandscape one" 
+        <motion.div className="imageContainerLandscape one" 
+           whileHover="hover"
+           variants={imageVariants}
+           initial="initial"
         style={{ border: `4px solid rgba(${mousePosition.x / window.innerWidth * 55}, ${mousePosition.y / window.innerHeight * 55}, 0, 1)` }}>
           <img src={WinterSummer} alt="When Winter Meets Summer, oil painting by Luna Smith" />
-        </div>
+        </motion.div>
         <motion.div 
         className="imageContainerLandscape two" 
         initial={{ opacity: 0, scale: 0.5 }}
         whileInView={{ opacity: 1, scale: 1 }}
+        whileHover="hover"
+        variants={imageVariants}
         transition={{
           duration: 2,
           ease: [0, 0.71, 0.2, 1.01],
@@ -53,14 +70,20 @@ const PageFour: React.FC = () => {
         style={{ border: `4px solid rgba(${mousePosition.x / window.innerWidth * 55}, ${mousePosition.y / window.innerHeight * 55}, 0, 1)` }}>
           <img src={WinterBreeze} alt="Winter Breeze, oil painting by Luna Smith" />
         </motion.div>
-        <div className="imageContainerPortrait three odd" 
+        <motion.div className="imageContainerPortrait three odd" 
+           whileHover="hover"
+           variants={imageVariants}
+           initial="initial"
         style={{ border: `4px solid rgba(${mousePosition.x / window.innerWidth * 55}, ${mousePosition.y / window.innerHeight * 55}, 0, 1)` }}>
           <img src={ItalianAlps} alt="Italian Alps, oil painting by Luna Smith" />
-        </div>
-        <div className="imageContainerPortrait four" 
+        </motion.div>
+        <motion.div className="imageContainerPortrait four" 
+           whileHover="hover"
+           variants={imageVariants}
+           initial="initial"
         style={{ border: `4px solid rgba(${mousePosition.x / window.innerWidth * 55}, ${mousePosition.y / window.innerHeight * 55}, 0, 1)` }}>
             <img src={Autumn} alt="the Reflection of my Universe, oil painting by Luna Smith" />
-        </div>
+        </motion.div>
       </div>
     </div>
   </div>
