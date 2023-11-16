@@ -2,6 +2,7 @@ import React from 'react'
 import InteractiveBackground from './InteractiveBackground'
 import TopBackground from './TopBackground'
 import ZinShadows from '../../assets/paintings/Z in Shadows by Luna Smith.jpg'
+import LinShadows from '../../assets/paintings/L in Shadows by Luna Smith.jpg'
 
 const PageOne = () => {
   return (
@@ -14,8 +15,11 @@ const PageOne = () => {
           <InteractiveBackground />
         </div>
         <div className="paintings">
-          <div className="imageContainerLandscape">
+          <div className="imageContainerLandscape one">
             <img src={ZinShadows} alt="Z in Shadows, oil painting by Luna Smith" />
+          </div>
+          <div className="imageContainerLandscape two">
+            <img src={LinShadows} alt="L in Shadows, oil painting by Luna Smith" />
           </div>
         </div>
       </div>
