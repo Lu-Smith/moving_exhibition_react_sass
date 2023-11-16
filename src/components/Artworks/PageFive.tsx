@@ -25,7 +25,7 @@ const PageFive = () => {
           <div className="imageContainerPortrait three">
             <img src={RainbowEgg} alt="Owl, oil painting by Luna Smith" />
           </div>
-        </div>
+      </div>
     </div>
   </div>
   )
