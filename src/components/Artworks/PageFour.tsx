@@ -3,6 +3,7 @@ import TopBackground from './TopBackground'
 import WinterSummer from '../../assets/paintings/LunaSmith_WhenWinterMeetsSummer.jpg'
 import WinterBreeze from '../../assets/paintings/LunaSmith_Winter Breeze.jpg'
 import ItalianAlps from '../../assets/paintings/Italian-Alps-by-Luna-Smith.jpg'
+import Autumn from '../../assets/paintings/Autumn-by-Luna-Smith.jpg'
 
 const PageFour = () => {
   return (
@@ -20,6 +21,9 @@ const PageFour = () => {
         </div>
         <div className="imageContainerPortrait three odd">
           <img src={ItalianAlps} alt="Italian Alps, oil painting by Luna Smith" />
+        </div>
+        <div className="imageContainerPortrait four">
+            <img src={Autumn} alt="the Reflection of my Universe, oil painting by Luna Smith" />
         </div>
       </div>
     </div>
