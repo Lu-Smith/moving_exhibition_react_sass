@@ -73,6 +73,11 @@
                 bottom: 10%;
             }
 
+            .five {
+                bottom: 18%;
+                right: 40%;
+            }
+
             .imageContainerPortrait {
                 width: 225px;
                 height: 300px;
@@ -90,6 +95,19 @@
             .imageContainerPortrait.odd {
                 width: 250px;
                 height: 300px;
+                position: relative;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .imageContainerPortrait.five {
+                width: 150px;
+                height: 200px;
                 position: relative;
                 overflow: hidden;
 

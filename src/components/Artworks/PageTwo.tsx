@@ -3,6 +3,7 @@ import TopBackground from './TopBackground'
 import GlenEtive from '../../assets/paintings/The-Song-of-the-Glen-Etive-by-Luna-Smith.jpg'
 import TrappedWind from '../../assets/paintings/The-Trapped-Wind.jpg'
 import SecretGarden from '../../assets/paintings/Secret Garden by Luna Smith.jpg'
+import PineCone from '../../assets/paintings/pinecone.jpg'
 
 const PageTwo = () => {
   return (
@@ -20,6 +21,9 @@ const PageTwo = () => {
             </div>
             <div className="imageContainerPortrait three">
               <img src={SecretGarden} alt="SecretGarden, oil painting by Luna Smith" />
+            </div>
+            <div className="imageContainerPortrait five">
+              <img src={PineCone} alt="Snowy Pinecone, oil painting by Luna Smith" />
             </div>
           </div>
         </div>
