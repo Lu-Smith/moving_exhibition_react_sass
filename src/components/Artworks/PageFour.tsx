@@ -4,6 +4,7 @@ import WinterSummer from '../../assets/paintings/LunaSmith_WhenWinterMeetsSummer
 import WinterBreeze from '../../assets/paintings/LunaSmith_Winter Breeze.jpg'
 import ItalianAlps from '../../assets/paintings/Italian-Alps-by-Luna-Smith.jpg'
 import Autumn from '../../assets/paintings/Autumn-by-Luna-Smith.jpg'
+import InteractiveBackgroundSmall from './InteractiveBackgroundSmall'
 
 const PageFour = () => {
   return (
@@ -11,6 +12,9 @@ const PageFour = () => {
     <div className="backgroundContainer">
       <div className="frontBackground">
         <TopBackground />
+      </div>
+      <div className="backBackgroundSmall">
+          <InteractiveBackgroundSmall />
       </div>
       <div className="paintings">
         <div className="imageContainerLandscape one">

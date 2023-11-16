@@ -17,7 +17,8 @@
 
         .backBackground {
             position: absolute;
-            left: 0%;
+            left: 10%;
+            top: 20%;
             z-index: 1;
             svg {
                 margin-bottom: 120px;
@@ -26,8 +27,8 @@
 
         .backBackgroundSmall {
             position: absolute;
-            right: 50%;
-            top: 6%;
+            right: 60%;
+            bottom: 15%;
             z-index: 1;
             svg {
                 margin-bottom: 120px;
