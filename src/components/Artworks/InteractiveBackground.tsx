@@ -18,8 +18,8 @@ const InteractiveBackground: React.FC = () => {
   return (
     <svg 
     fill="#000000" 
-    width="600px" 
-    height="600px" 
+    width="500px" 
+    height="500px" 
     viewBox="-25.6 -25.6 307.20 307.20" 
     id="Flat" 
     xmlns="http://www.w3.org/2000/svg" >
