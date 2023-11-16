@@ -13,7 +13,6 @@ const PageOne = () => {
           <InteractiveBackground />
         </div>
       </div>
- 
     </div>
   )
 }

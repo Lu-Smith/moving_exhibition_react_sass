@@ -1,8 +1,11 @@
 import React from 'react'
+import TopBackground from './TopBackground'
 
 const PageSix = () => {
   return (
-    <div>PageSix</div>
+    <div className="frontBackground">
+    <TopBackground />
+  </div>
   )
 }
 
