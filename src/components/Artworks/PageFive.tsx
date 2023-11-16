@@ -4,6 +4,7 @@ import InteractiveBackground from './InteractiveBackground'
 import Reflections from '../../assets/paintings/Autumn Reflection by Luna Smith.jpg'
 import WhiteSnake from '../../assets/paintings/Hatching White Snake by Luna Smith.jpg'
 import RainbowEgg from '../../assets/paintings/Rainbow-Egg-by-Luna-Smith.jpg'
+import AnimatedCircle from './AnimatedCircle';
 
 const PageFive: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -28,6 +29,9 @@ const PageFive: React.FC = () => {
       </div>
       <div className="backBackground">
         <InteractiveBackground />
+      </div>
+      <div className="animationContainer">
+        <AnimatedCircle />
       </div>
       <div className="paintings">
           <div className="imageContainerLandscape one" style={{ border: `4px solid rgba(${mousePosition.x / window.innerWidth * 55}, ${mousePosition.y / window.innerHeight * 55}, 0, 1)` }}>

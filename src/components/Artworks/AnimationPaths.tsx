@@ -1,13 +1,13 @@
 import React, { useState} from 'react';
-import { heart, art, book } from '../../assets/animationPaths';
+import { heart, star, note } from '../../assets/animationPaths';
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { getIndex, useFlubber } from '../../use-flubber';
 
-const paths = [art, heart, book];
+const paths = [heart, star, note];
 const colors = [
-  "#00cc88",
-  "#0099ff",
-  "#8855ff",
+  "rgb(64, 149, 160)",
+  "rgb(64, 149, 160)",
+  "rgb(64, 149, 160)",
 ];
 
 const AnimationPaths = () => {
@@ -18,7 +18,7 @@ const AnimationPaths = () => {
 
     React.useEffect(() => {
         const animation = animate(progress, pathIndex, {
-          duration: 0.8,
+          duration: 1,
           ease: "easeInOut",
           onComplete: () => {
             if (pathIndex === paths.length - 1) {
@@ -34,8 +34,8 @@ const AnimationPaths = () => {
       }, [pathIndex]);
 
   return (
-        <svg width="400" height="400">
-        <g transform="translate(10 10) scale(17 17)">
+        <svg width="200" height="200">
+        <g transform="translate(10 10) scale(8 8)">
             <motion.path fill={fill} d={path} />
         </g>
         </svg>
