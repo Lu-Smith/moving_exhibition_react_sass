@@ -27,16 +27,16 @@ const PageTwo: React.FC = () => {
             <TopBackground />
           </div>
           <div className="paintings">
-            <div className="imageContainerLandscape one" style={{ border: `8px solid rgba(${mousePosition.x / window.innerWidth * 255}, ${mousePosition.y / window.innerHeight * 255}, 0, 1)` }}>
+            <div className="imageContainerLandscape one" style={{ border: `8px solid rgba(${mousePosition.x / window.innerWidth * 55}, ${mousePosition.y / window.innerHeight * 55}, 0, 1)` }}>
               <img src={GlenEtive} alt="The song of Glen Etive, oil painting by Luna Smith" />
             </div>
-            <div className="imageContainerLandscape two" style={{ border: `8px solid rgba(${mousePosition.x / window.innerWidth * 255}, ${mousePosition.y / window.innerHeight * 255}, 0, 1)` }}>
+            <div className="imageContainerLandscape two" style={{ border: `8px solid rgba(${mousePosition.x / window.innerWidth * 55}, ${mousePosition.y / window.innerHeight * 55}, 0, 1)` }}>
               <img src={TrappedWind} alt="The Trapped Wind, oil painting by Luna Smith" />
             </div>
-            <div className="imageContainerPortrait three" style={{ border: `8px solid rgba(${mousePosition.x / window.innerWidth * 255}, ${mousePosition.y / window.innerHeight * 255}, 0, 1)` }}>
+            <div className="imageContainerPortrait three" style={{ border: `8px solid rgba(${mousePosition.x / window.innerWidth * 55}, ${mousePosition.y / window.innerHeight * 55}, 0, 1)` }}>
               <img src={SecretGarden} alt="SecretGarden, oil painting by Luna Smith" />
             </div>
-            <div className="imageContainerPortrait five" style={{ border: `4px solid rgba(${mousePosition.x / window.innerWidth * 255}, ${mousePosition.y / window.innerHeight * 255}, 0, 1)` }}>
+            <div className="imageContainerPortrait five" style={{ border: `4px solid rgba(${mousePosition.x / window.innerWidth * 55}, ${mousePosition.y / window.innerHeight * 55}, 0, 1)` }}>
               <img src={PineCone} alt="Snowy Pinecone, oil painting by Luna Smith" />
             </div>
           </div>
