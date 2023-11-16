@@ -36,9 +36,13 @@ const PageFive: React.FC = () => {
       <div className="frontBackground">
         <TopBackground />
       </div>
-      <div className="backBackground">
+      <motion.div 
+      className="backBackground"
+      whileHover="hover"
+      variants={backgroundVariants}
+      initial="initial">
         <InteractiveBackground />
-      </div>
+      </motion.div>
       <div className="animationContainer">
         <AnimatedCircle />
       </div>
