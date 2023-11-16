@@ -3,6 +3,7 @@ import InteractiveBackground from './InteractiveBackground'
 import TopBackground from './TopBackground'
 import ZinShadows from '../../assets/paintings/Z in Shadows by Luna Smith.jpg'
 import LinShadows from '../../assets/paintings/L in Shadows by Luna Smith.jpg'
+import WomenNature from '../../assets/paintings/LunaSmith_LifeArchitect.jpg'
 
 const PageOne = () => {
   return (
@@ -20,6 +21,9 @@ const PageOne = () => {
           </div>
           <div className="imageContainerLandscape two">
             <img src={LinShadows} alt="L in Shadows, oil painting by Luna Smith" />
+          </div>
+          <div className="imageContainerPortrait three">
+            <img src={WomenNature} alt="Women Nature, oil painting by Luna Smith" />
           </div>
         </div>
       </div>
