@@ -10,3 +10,9 @@
     justify-content: $jc;
     flex-direction: $fd;
 }
+
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content
+    }
+};
