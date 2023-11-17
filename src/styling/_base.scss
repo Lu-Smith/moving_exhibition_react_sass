@@ -5,32 +5,24 @@
     width: 5px;
     background: $primary-background;
     -webkit-border-radius: 1ex;
+
+    @include mobile {
+      height: 30px;
+      width: 3px;
+    }
   }
   
   ::-webkit-scrollbar-thumb {
     background: $scroll-main-color;
     -webkit-border-radius: 1ex;
+
+    @include mobile {
+      -webkit-border-radius: 0.5ex;
+    }
   }
   
   ::-webkit-scrollbar-corner {
     background: $scroll-main-color;
-  }
-
-  #progress {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    transform: rotate(-90deg);
-  }
-  
-  circle {
-    stroke-dashoffset: 0;
-    stroke-width: 15%;
-    fill: none;
-  }
-
-  #progress .indicator {
-    stroke: green;
   }
 
   //main components
@@ -40,6 +32,11 @@
     line-height: $large-line-height;
     font-weight: 400;
     color: $primary-color;
+
+    @include mobile {
+      font-size: $mobile-large-font-size;
+      line-height: $mobile-large-line-height;
+    }
   }
 
   h2, h3 {
@@ -47,10 +44,19 @@
     line-height: $big-line-height;
     font-weight: 400;
     color: $secondary-color;
+
+    @include mobile {
+      font-size: $mobile-big-font-size;
+      line-height: $mobile-big-line-height;
+    }
   }
 
   h2 {
     max-width: 800px;
+
+    @include mobile {
+      max-width: 300px;
+    }
   }
 
   button {
@@ -58,5 +64,10 @@
     font-weight: 600;
     letter-spacing: 1px;
     color: $scroll-main-color;
+
+    @include mobile {
+      font-size: $mobile-big-font-size;
+      font-weight: 500;
+    }
 
   }
