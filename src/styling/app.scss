@@ -38,5 +38,9 @@
     position: fixed;
     bottom: 80px;
     z-index: 1000;
+
+    @include mobile {
+      bottom: 70px;
+    }
  }
 }
