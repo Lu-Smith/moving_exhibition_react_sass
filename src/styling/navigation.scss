@@ -2,6 +2,10 @@
     @include flex-direction(center, column);
     gap: 20px;
 
+    @include mobile {
+        gap: 10px;
+    }
+
     .scrollButton {
         @include flex(center, center);
         
@@ -13,6 +17,11 @@
             border: $border-button;
             transition: 200ms all ease-in-out;
 
+            @include mobile {
+                width: 150px;
+                height: 60px;
+            }
+
             &:hover {
                 border: $hover-border-button;
             }
@@ -20,8 +29,10 @@
             div {
                 width: 180px;
                 height: 80px;
-                svg {
 
+                @include mobile {
+                    width: 150px;
+                    height: 60px;
                 }
             }
         }
