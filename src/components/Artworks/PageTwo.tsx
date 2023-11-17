@@ -36,6 +36,16 @@ const PageTwo: React.FC = () => {
             className="imageContainerLandscape one" 
             whileHover="hover"
             variants={imageVariants}
+            transition={{
+              duration: 2,
+              ease: [0, 0.71, 0.2, 1.01],
+              scale: {
+                type: "spring",
+                damping: 5,
+                stiffness: 100,
+                restDelta: 0.001
+              }
+            }} 
             initial="initial"
             style={{ border: `8px solid rgba(${mousePosition.x / window.innerWidth * 55}, ${mousePosition.y / window.innerHeight * 55}, 0, 1)` }}>
               <img src={GlenEtive} alt="The song of Glen Etive, oil painting by Luna Smith" />
@@ -44,6 +54,16 @@ const PageTwo: React.FC = () => {
             className="imageContainerLandscape two" 
             whileHover="hover"
             variants={imageVariants}
+            transition={{
+              duration: 2,
+              ease: [0, 0.71, 0.2, 1.01],
+              scale: {
+                type: "spring",
+                damping: 5,
+                stiffness: 100,
+                restDelta: 0.001
+              }
+            }} 
             initial="initial"
             style={{ border: `8px solid rgba(${mousePosition.x / window.innerWidth * 55}, ${mousePosition.y / window.innerHeight * 55}, 0, 1)` }}>
               <img src={TrappedWind} alt="The Trapped Wind, oil painting by Luna Smith" />
