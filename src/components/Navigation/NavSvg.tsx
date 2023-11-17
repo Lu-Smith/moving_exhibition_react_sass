@@ -1,13 +1,16 @@
 import { motion } from 'framer-motion';
 
 const NavSvg = () => {
+
+    const isMobile = window.innerWidth <= 768;
+
   return (
 <div>
     <motion.svg 
     fill="rgb(64, 149, 160)" 
     // whileHover={{ fill: 'rgb(20, 88, 44)' }}
     // whileTap={{ fill: 'rgb(0, 102, 255)' }}
-    height="80px" 
+    height={isMobile ? "60px" :"80px" }
     width="100px" 
     version="1.1" 
     id="Layer_1" 
