@@ -21,12 +21,24 @@
             top: 20%;
             z-index: 1;
 
+            @include medium{
+                top: 12%;
+            }
+
+            @include mobile{
+                top: 20%;
+            }
+
             svg {
                 margin-bottom: 120px;
 
                 @include ipad {
                     width: 400px;
                     height: 400px;
+                }
+
+                @include medium{
+                    top: 0%;
                 }
 
                 @include mobile {
@@ -45,7 +57,7 @@
 
             @include ipad {
                 width: 160px;
-                right: 94%;
+                right: 88%;
                 bottom: 8%;
             }
 
@@ -73,6 +85,7 @@
             @include ipad {
                 width: 300px;
                 height: 300px;
+                bottom: 30%;
             }
 
             @include mobile {
@@ -80,22 +93,28 @@
                 height: 180px;
                 right: 70%;
             }
-                .box {
-                    width: 250px;
-                    height: 250px;
-                    border-radius: 50%;
-                    background: $scroll-main-color;
 
-                    @include ipad{
-                        width: 200px;
-                        height: 200px;
-                    }
+            .box {
+                width: 250px;
+                height: 250px;
+                border-radius: 50%;
+                background: $scroll-main-color;
 
-                    @include mobile {
-                        width: 100px;
-                        height: 100px;
-                    }
+                @include ipad{
+                    width: 200px;
+                    height: 200px;
                 }
+
+                @include medium{
+                    width: 160px;
+                    height: 160px;
+                }
+
+                @include mobile {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
         }
 
         .paintings {
@@ -111,6 +130,13 @@
                 @include ipad {
                     width: 240px;
                     height: 180px;
+                    left: -35%;
+                }
+
+                @include medium {
+                    width: 200px;
+                    height: 150px;
+                    left: -25%;
                 }
 
                 @include mobile {
@@ -174,14 +200,21 @@
 
             .four {
                 bottom: 10%;
+
+                @include medium{
+                    right: 5%;
+                }
+
                 @include mobile {
-                    bottom: 35%;
+                    bottom: 15%;
+                    right: 15%;
                 }
             }
 
             .five {
                 bottom: 18%;
                 right: 40%;
+
                 @include mobile {
                     bottom: 22%;
                     right: 30%
